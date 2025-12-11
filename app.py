@@ -41,10 +41,10 @@ try:
 
     iface = gr.Interface(
         fn=gradio_predict_sentiment, 
-        inputs=gr.Textbox(lines=5, label="EnterText Here"), 
+        inputs=gr.Textbox(lines=5, label="Enter Movie Review Text Here"), 
         outputs="text",
-        title="Text Sentiment Analyzer (Naive Bayes)",
-        description="Built on Movies Review Data set ... Type in a comment or paragraph and get an instant sentiment prediction (Positive or Negative).",
+        title="IMDB Movie Review Sentiment Analyzer",
+        description="Type in a movie review and get an instant sentiment prediction (Positive or Negative).",
         examples=[
             ["The special effects were terrible, and the plot made no sense."],
             ["This movie was so heartwarming and perfectly acted, a true masterpiece!"],
@@ -56,4 +56,5 @@ try:
 except FileNotFoundError:
     print("\n--- ERROR: Files Not Found ---")
     print("Please ensure 'multinomial_nb_model.pkl' and 'count_vectorizer.pkl' are in the same directory as app.py.")
+
     print("Check your local folder and try again.")
