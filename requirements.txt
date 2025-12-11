@@ -1,0 +1,7 @@
+
+# Libraries required to run the trained model and the Gradio interface
+
+pandas
+scikit-learn
+joblib
+gradio
